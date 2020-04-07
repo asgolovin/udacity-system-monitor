@@ -1,9 +1,8 @@
 #ifndef PROCESS_H
 #define PROCESS_H
 
-#include <string>
 #include <ctime>
-
+#include <string>
 
 /*
 Basic class for Process representation
@@ -21,16 +20,15 @@ class Process {
   std::string Ram();
   long int UpTime();
   float ActiveTime();
-  bool operator<(const Process& a) const;  // TODO: See src/process.cpp
+  bool operator<(const Process& a) const; 
 
-  // TODO: Declare any necessary private members
  private:
-   int pid_{0};
-   time_t startTime_{0}, systemStartTime_{0};
-   std::string user_{""}, command_{""};
-   float prevActiveTime_{0.};
-   long prevUpTime_{0};
-   float cpuUtilization_{0};
+  int pid_{0};
+  time_t startTime_{0}, systemStartTime_{0};
+  std::string user_{""}, command_{""};
+  float prevActiveTime_{0.};
+  long prevUpTime_{0};
+  float cpuUtilization_{0};
 };
 
 #endif
