@@ -20,7 +20,7 @@ class Process {
   std::string Ram();
   long int UpTime();
   float ActiveTime();
-  bool operator<(const Process& a) const; 
+  bool operator<(const Process& a) const;
 
  private:
   int pid_{0};
