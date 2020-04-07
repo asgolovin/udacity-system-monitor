@@ -6,6 +6,10 @@
 #include <string>
 
 namespace LinuxParser {
+
+template <typename Value>
+Value FindKeyValuePair(std::string filepath, std::string key, int valuePos = 1);
+
 // Paths
 const std::string kProcDirectory{"/proc/"};
 const std::string kCmdlineFilename{"/cmdline"};
@@ -51,7 +55,7 @@ std::string Command(int pid);
 std::string Ram(int pid);
 std::string Uid(int pid);
 std::string User(int pid);
-long int UpTime(int pid);
+long int StartTime(int pid);
 };  // namespace LinuxParser
 
 #endif
